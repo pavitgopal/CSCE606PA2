@@ -1,10 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @movie %>
+<div class="movie-description-box">
+  <%= render @movie %>
+</div>
 
-<div>
-  <%= link_to "Edit this movie", edit_movie_path(@movie) %> |
-  <%= link_to "Back to movies", movies_path %>
-
-  <%= button_to "Destroy this movie", @movie, method: :delete %>
+<div class="button-group">
+  <%= button_to "Edit this movie", edit_movie_path(@movie), method: :get, class: 'action-button' %>
+  <%= button_to "Back to movies", movies_path, method: :get, class: 'action-button' %>
+  <%= button_to "Destroy this movie", @movie, method: :delete, data: { confirm: 'Are you sure?' }, class: 'action-button' %>
 </div>

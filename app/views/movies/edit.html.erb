@@ -2,11 +2,13 @@
 
 <h1>Editing movie</h1>
 
-<%= render "form", movie: @movie %>
+<div class="form-box">
+  <%= render "form", movie: @movie %>
+</div>
 
 <br>
 
-<div>
-  <%= link_to "Show this movie", @movie %> |
-  <%= link_to "Back to movies", movies_path %>
+<div class="button-group">
+  <%= button_to "Show this movie", @movie, method: :get, class: 'action-button' %>
+  <%= button_to "Back to movies", movies_path, method: :get, class: 'action-button' %>
 </div>

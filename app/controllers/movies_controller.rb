@@ -1,13 +1,19 @@
 class MoviesController < ApplicationController
-  before_action :set_movie, only: %i[ show edit update destroy ]
+  before_action :set_movie, only: %i[show edit update destroy]
 
   # GET /movies or /movies.json
   def index
-    @movies = Movie.all
-  end
+    allowed_sort_columns = ['title', 'rating', 'release_date']
 
-  # GET /movies/1 or /movies/1.json
-  def show
+    # Determine the sort column and direction from the session or default to 'title' and 'asc'
+    sort_column = allowed_sort_columns.include?(params[:sort]) ? params[:sort] : session[:sort] || 'title'
+    sort_direction = %w[asc desc].include?(params[:direction]) ? params[:direction] : session[:direction] || 'asc'
+
+    # Store the sorting parameters in the session
+    session[:sort] = sort_column
+    session[:direction] = sort_direction
+
+    @movies = Movie.order("#{sort_column} #{sort_direction}")
   end
 
   # GET /movies/new

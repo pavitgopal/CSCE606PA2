@@ -1,15 +1,166 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+.movies-container {
+    margin: 0 auto;
+    width: 80%; /* Adjust as needed */
+    padding: 20px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+    background-color: #f9f9f9; /* Optional: background color */
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Light gray border for table rows */
+  }
+  
+  th.sorted-asc {
+    background-color: lightblue;
+  }
+  
+  th.sorted-desc {
+    background-color: lightcoral;
+  }
+
+  .new-movie-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .new-movie-link {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Optional: rounded corners */
+    background-color: #f9f9f9; /* Optional: background color */
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Text color */
+    font-weight: bold; /* Bold text */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+    transition: background-color 0.3s, color 0.3s; /* Optional: smooth transition */
+  }
+  
+  .new-movie-link:hover {
+    background-color: #ddd; /* Darker background on hover */
+    color: #000; /* Darker text color on hover */
+  }
+
+  .form-container {
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Optional: rounded corners */
+    background-color: #f9f9f9; /* Optional: background color */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+  }
+  
+  .back-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Optional: rounded corners */
+    background-color: #f9f9f9; /* Optional: background color */
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Text color */
+    font-weight: bold; /* Bold text */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+    transition: background-color 0.3s, color 0.3s; /* Optional: smooth transition */
+  }
+  
+  .back-button:hover {
+    background-color: #ddd; /* Darker background on hover */
+    color: #000; /* Darker text color on hover */
+  }
+  
+
+  .movie-description-box {
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Optional: rounded corners */
+    background-color: #f9f9f9; /* Optional: background color */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .action-button {
+    padding: 10px 20px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Optional: rounded corners */
+    background-color: #f9f9f9; /* Optional: background color */
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Text color */
+    font-weight: bold; /* Bold text */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+    transition: background-color 0.3s, color 0.3s; /* Optional: smooth transition */
+  }
+  
+  .action-button:hover {
+    background-color: #ddd; /* Darker background on hover */
+    color: #000; /* Darker text color on hover */
+  }
+  
+  .action-button:active {
+    background-color: #ccc; /* Even darker background on click */
+  }
+
+  .form-box {
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Optional: rounded corners */
+    background-color: #f9f9f9; /* Optional: background color */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .action-button {
+    padding: 10px 20px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Optional: rounded corners */
+    background-color: #f9f9f9; /* Optional: background color */
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Text color */
+    font-weight: bold; /* Bold text */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+    transition: background-color 0.3s, color 0.3s; /* Optional: smooth transition */
+  }
+  
+  .action-button:hover {
+    background-color: #ddd; /* Darker background on hover */
+    color: #000; /* Darker text color on hover */
+  }
+  
+  .action-button:active {
+    background-color: #ccc; /* Even darker background on click */
+  }
+  
+  
+  
